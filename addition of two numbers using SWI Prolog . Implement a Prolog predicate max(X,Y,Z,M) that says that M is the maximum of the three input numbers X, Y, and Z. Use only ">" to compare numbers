@@ -1,3 +1,4 @@
+SWISH PROLOG
 max(X,Y,Z,M):-X>Y,X>Z,M is X.
 max(X,Y,Z,M):-X<Y,Y>Z,M is Y.
 max(X,Y,Z,M):-Z>Y,X<Z,M is Z.
