@@ -1,0 +1,69 @@
+// Program to illustrate the working of public and private in C++ Class
+#include <iostream>
+using namespace std;
+class Room {
+private:
+double length;
+double breadth;
+double height;
+public:
+// function to initialize private variables 
+void initData(double len, double brth, double hgt) {
+length = len;
+breadth = brth;
+height = hgt;
+}
+double calculateArea() { 
+    return length * breadth;
+     }
+double calculateVolume() { 
+    return length * breadth * height;
+}
+};
+int main() {
+// create object of Room class 
+Room room1;
+// pass the values of private variables as arguments 
+room1.initData(42.5, 30.8, 19.2);
+cout << "Area of Room = " << room1.calculateArea() << endl;
+cout << "Volume of Room = " << room1.calculateVolume() << endl;
+return 0;
+}
+
+
+
+
+C++ Parameterized Constructor
+
+// C++ program to calculate the area of a wall
+
+#include <iostream>
+using namespace std;
+// declare a class
+class Wall {
+  private:
+    double length;
+    double height;
+  public:
+    // parameterized constructor to initialize variables
+    Wall(double len, double hgt) {
+      length = len;
+      height = hgt;
+    }
+
+    double calculateArea() {
+      return length * height;
+    }
+};
+
+int main() {
+  // create object and initialize data members
+  Wall wall1(10.5, 8.6);
+  Wall wall2(8.5, 6.3);
+
+  cout << "Area of Wall 1: " << wall1.calculateArea() << endl;
+  cout << "Area of Wall 2: " << wall2.calculateArea();
+
+  return 0;
+}
+
