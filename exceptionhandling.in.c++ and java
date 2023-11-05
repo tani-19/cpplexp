@@ -1,0 +1,82 @@
+EXCEPTION HANDLING IN C++
+#include <iostream>
+#include <stdexcept>
+using namespace std;
+int main()
+{
+int a=10,b=0,c;
+try{
+if(b==0)
+{
+throw runtime_error("divide by zero is an error");
+c=a/b;
+}
+}
+catch(int error)
+{
+cout<<"exception ocured :"<<endl<<error;
+}
+catch(...)
+{
+cout<<"some exception occured"<<endl;
+}
+return 0;
+}
+
+EXCEPTION HANDLING IN JAVA USING TRYCATCH BLOCKS
+public class JavaExceptionExample{
+ public static void main(String args[]){
+ try{
+ //code that may raise exception
+ int data=100/0;
+ }catch(ArithmeticException e){System.out.println(e);}
+ //rest code of the program
+ System.out.println("rest of the code...");
+ }
+}
+
+
+EXCEPTION HANDLING IN JAVA USING MULTIPLE CATCH BLOCKS
+public class MultipleCatchBlock1 {  
+    public static void main(String[] args) { 
+           try{    
+                int a[]=new int[5];    
+                a[5]=30/0;    
+               }    
+               catch(ArithmeticException e)  
+                  {  
+                   System.out.println("Arithmetic Exception occurs");  
+                  }    
+               catch(ArrayIndexOutOfBoundsException e)  
+                  {  
+                   System.out.println("ArrayIndexOutOfBounds Exception occurs");  
+                  }    
+               catch(Exception e)  
+                  {  
+                   System.out.println("Parent Exception occurs");  
+                  }             
+               System.out.println("rest of the code");    
+    }  
+}  
+
+
+EXCEPTION HANDLING IN JAVA USING FINALLY KEYWORD WITH RETURN STATEMENT
+class TestFinallyBlock {    
+  public static void main(String args[]){    
+  try{    
+//below code do not throw any exception  
+   int data=25/5;    
+   System.out.println(data);    
+  }    
+//catch won't be executed  
+  catch(NullPointerException e){  
+System.out.println(e);  
+}    
+//executed regardless of exception occurred or not  
+ finally {  
+System.out.println("finally block is always executed");  
+}    
+System.out.println("rest of the code...");    
+  }  
+  }  
+
