@@ -1,0 +1,44 @@
+a) Create a list containing all integers within a given range.
+Example:
+?-range(4,9,L).
+L = [4,5,6,7,8,9
+
+ANSWER:
+range(I,I,[I]).
+range(I,K,[I|L]) :- I < K, I1 is I + 1, range(I1,K,L).
+
+QUERY:
+range(4,9,L).
+
+b) Implement a predicate named enumerate: This predicate should take a list as the first argument, and return
+an integer number as the second argument, representing the length of the list, or the number of items it
+contains.
+ Examples: (a) enumerate([john],R). Should return R = 1
+
+ANSWER:
+size([],0).
+size([_|T],N) :- size(T,N1), N is N1+1.
+
+QUERY:
+size([1,2,3,4,5,6],N)
+
+c) Design an application of membership in lists: You’re working as a bouncer at a nightclub, and you want
+to write a predicate which will let us know whether someone should be allowed in or not, based on whether
+their name is on the guest list. If their name is on the list, then they should be permitted to enter. Otherwise,
+they will have to wait outside.
+
+onTheGuestList(Name, [Name|_RestOfTheList]).
+onTheGuestList(Name, [_FirstPerson|RestofTheList]) :- onTheGuestList(Name,RestofTheList).
+
+QUERY:
+onTheGuestList(andy,[kaushiki,andy,rohan,rohil,ahana]).
+
+
+d) Implement append method on list using recursion
+
+ANSWER:
+append1([],L2,L2).
+append1([H|T],L2,[H|L3]) :- append1(T,L2,L3).
+
+QUERY:
+append1([1,2,3,4],[12,13,1,41,15],L3).
