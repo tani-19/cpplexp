@@ -1,0 +1,60 @@
+PROGRAM1:
+#include <iostream>
+using namespace std;
+class Base
+{
+    public:
+   virtual void show()
+    {
+        cout<<" In Base \n";
+    }
+};
+class Derived : public Base
+{
+    public:
+    void show()
+    {
+        cout << "Derived class is derived from the base class." ;
+    }
+};
+int main()
+{
+    Base *bptr;
+    //Base b;
+    Derived d;
+    bptr = &d;
+    bptr->show();
+    return 0;
+}
+
+PROGRAM2:
+
+#include <iostream>
+using namespace std;
+class A
+{
+   public:
+   int x=5;
+    public:
+    virtual void display()
+    {
+        cout << "Value of x is : " << x<<endl;
+    }
+};
+class B: public A
+{
+    int y = 10;
+    public:
+    void display()
+    {
+       cout << "Value of y is : " <<y<<endl;
+    }
+};
+int main()
+{
+    A *a;
+    B b;
+    a = &b;
+   a->display();
+    return 0;
+}
