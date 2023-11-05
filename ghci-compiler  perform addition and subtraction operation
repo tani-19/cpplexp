@@ -1,9 +1,0 @@
-Prelude> :{
-Prelude| add :: Integer -> Integer -> Integer   --function declaration 
-Prelude| add x y =  x + y                       --function definition 
-Prelude| 
-Prelude| main = do 
-Prelude|    putStrLn "The addition of the two numbers is:"  
-Prelude|    print(add 2 5)    --calling a function 
-Prelude| :}
-Prelude> add 2 3
