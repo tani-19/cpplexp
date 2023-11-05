@@ -1,0 +1,15 @@
+Program for multiplication
+Prelude> :{
+Prelude| mult _ 0 = 0
+Prelude| mult n m = ( mult n (m-1)) + n
+Prelude| :}
+Prelude> mult 2 3
+6
+
+Program For Addition
+Prelude> :{
+Prelude| addition x 0 = x
+Prelude| addition x y = (1 + addition x (y-1))
+Prelude| :}
+Prelude> addition 1 3
+4
