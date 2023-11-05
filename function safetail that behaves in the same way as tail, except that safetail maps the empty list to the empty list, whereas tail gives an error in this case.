@@ -1,3 +1,4 @@
+FIRST PART
 ghci
 
 Prelude> let numbers=[4,8,15,16,23,42]
@@ -25,3 +26,19 @@ Prelude> 1:5:[]
 
 Prelude> 99: tail numbers
 [99,8,15,16,23,42]
+
+
+ANOTHER PART OF PROGRAM
+Prelude> safetall xs= if null xs then [] else tall xs
+
+Prelude> safetail [1,2,3,4,5]
+[2,3,4,5]
+
+Prelude> safetail[]
+[]
+
+Prelude> tail[1,2,3,4,5]
+[2,3,4,5]
+
+Prelude> tail[]
+*** Exception: Prelude.tail: empty list
