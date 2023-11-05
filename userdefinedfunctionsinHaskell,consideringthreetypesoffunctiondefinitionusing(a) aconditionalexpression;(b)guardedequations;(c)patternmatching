@@ -1,0 +1,38 @@
+a)conditionalexpression
+
+main = do   
+let var = 23 
+if var `rem` 2 == 0 
+then putStrLn "Number is Even" 
+else putStrLn "Number is Odd"
+
+gedit exp7.hs
+ghc -o exp7 exp7.hs
+./exp7
+
+b) Guarded equation
+
+ghci
+Prelude> :{
+Prelude| fact :: Integer -> Integer
+Prelude❘ fact n | n == 0 = 1
+Prelude|        |n /= 0 = n * fact (n-1)
+Prelude| main = do
+Prelude| putStrLn "The factorial of 5 is:"
+Prelude| print (fact 5)
+Prelude :}
+Prelude> fact 5
+120
+
+c)patternmatching
+
+Prelude> :{
+Prelude fact :: Int -> Int
+Prelude fact 0 = 1
+Prelude fact n = n fact (n-1) *
+Prelude main = do
+Prelude putStrLn "The factorial of 5 is:"
+Prelude print(fact 5)
+Prelude :}
+Prelude> fact 6
+720
