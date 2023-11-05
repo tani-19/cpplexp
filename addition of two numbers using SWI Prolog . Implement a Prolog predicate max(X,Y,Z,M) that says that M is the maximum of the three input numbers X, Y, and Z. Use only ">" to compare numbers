@@ -12,4 +12,4 @@ max(X,Y,Z,M):-X=Y,X=Z,M is X.
 QUERIES:
 max(10,25,13,10)
 max(10,25,13,25)
-max(5,10,15,10)
+max(6,3,1,6)
