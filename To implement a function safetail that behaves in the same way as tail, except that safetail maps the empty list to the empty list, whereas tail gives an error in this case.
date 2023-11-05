@@ -1,0 +1,25 @@
+Prelude> let numbers=[4,8,15,16,23,42]
+
+Prelude> head numbers
+4
+
+Prelude> tail numbers
+[8,15,16,23,42]
+
+Prelude> tail (tail numbers)
+[15,16,23,42]
+
+Prelude> tail (tail (tail (tail (tail (tail numbers)))))
+[]
+
+Prelude> numbers
+[4,8,15,16,23,42]
+
+Prelude> 5:[]
+[5]
+
+Prelude> 1:5:[]
+[1,5]
+
+Prelude> 99: tail numbers
+[99,8,15,16,23,42]
