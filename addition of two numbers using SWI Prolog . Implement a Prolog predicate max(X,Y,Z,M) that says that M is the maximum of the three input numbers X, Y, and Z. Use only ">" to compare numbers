@@ -1,0 +1,15 @@
+max(X,Y,Z,M):-X>Y,X>Z,M is X.
+max(X,Y,Z,M):-X<Y,Y>Z,M is Y.
+max(X,Y,Z,M):-Z>Y,X<Z,M is Z.
+max(X,Y,Z,M):-X=Y,X<Z,M is Z.
+max(X,Y,Z,M):-X<Y,X=Z,M is Y.
+max(X,Y,Z,M):-Y=Z,X>Y,M is X.
+max(X,Y,Z,M):-X=Y,X>Z,M is X.
+max(X,Y,Z,M):-X=Z,Y<Z,M is Z.
+max(X,Y,Z,M):-Y=Z,X<Z,M is Z.
+max(X,Y,Z,M):-X=Y,X=Z,M is X.
+
+QUERIES:
+max(10,25,13,10)
+max(10,25,13,25)
+max(5,10,15,10)
