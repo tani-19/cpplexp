@@ -1,0 +1,17 @@
+Prelude> pi
+   3.141592653589793
+
+   Prelude> :type pi
+  pi :: Floating a => a
+
+  Prelude> "abc"++"xyz"
+  "abcxyz"
+
+ Prelude> :type "abc"++"xyz"
+"abc"++"xyz" :: [Char]
+
+Prelude> :type (True, False)
+(True, False) :: (Bool, Bool)
+
+Prelude> :type (True, False, 'a')
+(True, False, 'a') :: (Bool, Bool, Char)
