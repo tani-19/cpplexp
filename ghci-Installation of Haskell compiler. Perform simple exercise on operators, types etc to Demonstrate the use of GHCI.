@@ -1,0 +1,39 @@
+a)To install Haskell on Linux ,run following command on terminal: 
+~$ sudo apt install haskell-platform -y
+ghc -o demo demo.hs
+./demo
+
+
+b)Using the ghci compiler  perform addition and subtraction operation
+
+Prelude> :{
+Prelude| add :: Integer -> Integer -> Integer   --function declaration 
+Prelude| add x y =  x + y                       --function definition 
+Prelude| 
+Prelude| main = do 
+Prelude|    putStrLn "The addition of the two numbers is:"  
+Prelude|    print(add 2 5)    --calling a function 
+Prelude| :}
+Prelude> add 2 3
+5
+
+
+c)Determine the type of each of the following expressions using : type keyword 
+
+Prelude> pi
+3.141592653589793
+
+Prelude> :type pi
+pi :: Floating a => a
+
+Prelude> "abc"++"xyz"
+"abcxyz"
+
+Prelude> :type "abc"++"xyz"
+"abc"++"xyz" :: [Char]
+
+Prelude> :type (True, False)
+(True, False) :: (Bool, Bool)
+
+Prelude> :type (True, False, 'a')
+(True, False, 'a') :: (Bool, Bool, Char)

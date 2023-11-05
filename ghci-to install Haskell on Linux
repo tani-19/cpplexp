@@ -1,3 +1,0 @@
-~$ sudo apt install haskell-platform -y
-ghc -o demo demo.hs
-./demo
