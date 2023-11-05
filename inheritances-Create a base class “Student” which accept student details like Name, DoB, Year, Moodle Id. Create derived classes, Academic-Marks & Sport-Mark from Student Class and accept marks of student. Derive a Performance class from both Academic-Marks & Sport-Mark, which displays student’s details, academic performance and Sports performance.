@@ -192,3 +192,31 @@ s1.Average();
 s1.Total();
 return 0;
 }
+
+HYBRID2:
+#include<iostream> 
+using namespace std;
+class Animals{
+public:
+Animals(){ 
+    cout << "This Animal class."<<endl; 
+    } 
+    };
+class Mammals: public Animals {
+public:
+Mammals(){ cout<<"This is Mammal class. "<<endl; 
+}
+};
+class Herbivores{
+public:
+Herbivores() { cout<<"This is Herbivore class. "<<endl; }
+};
+class Cow: public Mammals, public Herbivores{
+public:
+Cow(){
+cout<<"This is Cow class. "<<endl; }
+};
+int main(){
+Cow C;
+return 0;
+}
